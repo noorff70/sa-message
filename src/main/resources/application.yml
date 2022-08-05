@@ -1,0 +1,44 @@
+#default port where the service will be started
+server:
+  port: 8084  
+
+#tells about the Eureka server details and its refresh time 
+eureka:     
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+ 
+spring:   
+  application:
+    name: sa-message   #current service name to be used by the eureka server
+  mail: 
+   host: smtp.gmail.com
+   port: 587
+   username: studyaid.ca@gmail.com
+   password: tkxwzmhryfwuhaxc
+   properties:
+    mail:
+     smtp:
+      auth: true
+      #connectiontimeout: 5000
+      #timeout: 5000
+      #writetimeout: 5000
+      starttls:
+       enable: true
+
+   
+#management:
+#  security:
+#    enabled: false  #disable the spring security on the management endpoints like /env, /refresh etc. 
+    
+
+#logging:
+#  level:
+#    com.sa.display: DEBUG
