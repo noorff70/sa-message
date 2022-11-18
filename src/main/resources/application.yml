@@ -9,7 +9,10 @@ eureka:
     leaseExpirationDurationInSeconds: 2
   client:
     serviceUrl:
+      # localhost
       defaultZone: http://localhost:8761/eureka/
+      # docker
+      # defaultZone: http://sa-discovery:8761/eureka/
     healthcheck:
       enabled: true
     lease:
