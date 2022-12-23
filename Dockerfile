@@ -16,6 +16,8 @@ COPY ${JAR_FILE} email.jar
 # java -jar /opt/app/app.jar
 ENTRYPOINT ["java","-jar","email.jar"]
 
+EXPOSE 8084
+
 # Make docker file
 # C:\dev\repos\studyaid\sa-gateway>docker build -t sa-message .
 
